@@ -3,7 +3,7 @@ Exercises
 1. Change the board. //complete
 2. Change the number of ghosts. //complete
 3. Change where pacman starts. //complete
-4. Make the ghosts faster/slower.
+4. Make the ghosts faster/slower. //complete
 5. Make the ghosts smarter.
 """
 
@@ -18,14 +18,14 @@ writer = Turtle(visible=False)
 aim = vector(5, 0)
 pacman = vector(0, 0)
 ghosts = [
-    [vector(-180, 160), vector(5, 0)],
-    [vector(-180, -160), vector(0, 5)],
-    [vector(100, 160), vector(0, -5)],
-    [vector(100, -160), vector(-5, 0)],
-    [vector(-100, 160), vector(5, 0)],
-    [vector(-180, -80), vector(0, 5)],
-    [vector(100, 0), vector(0, -5)],
-    [vector(-100, 20), vector(-5, 0)],
+    [vector(-180, 160), vector(10, 0)],
+    [vector(-180, -160), vector(0, 10)],
+    [vector(100, 160), vector(0, -10)],
+    [vector(100, -160), vector(-10, 0)],
+    [vector(-100, 160), vector(10, 0)],
+    [vector(-180, -80), vector(0, 10)],
+    [vector(100, 0), vector(0, -10)],
+    [vector(-100, 20), vector(-10, 0)],
 ]
 # fmt: off
 tiles = [
@@ -137,10 +137,10 @@ def move():
             point.move(course)
         else:
             options = [
-                vector(5, 0),
-                vector(-5, 0),
-                vector(0, 5),
-                vector(0, -5),
+                vector(10, 0),
+                vector(-10, 0),
+                vector(0, 10),
+                vector(0, -10),
             ]
             plan = choice(options)
             course.x = plan.x
