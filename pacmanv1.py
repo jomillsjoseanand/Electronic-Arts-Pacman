@@ -4,7 +4,7 @@ Exercises
 2. Change the number of ghosts. //complete
 3. Change where pacman starts. //complete
 4. Make the ghosts faster/slower. //complete
-5. Make the ghosts smarter.
+5. Make the ghosts smarter. //complete
 """
 
 from random import choice
@@ -142,10 +142,29 @@ def move():
                 vector(0, 10),
                 vector(0, -10),
             ]
+            if (point.x < pacman.x):
+                if (point.y < pacman.y):
+                    plan = choice([options[0], options[2]])
+                    course.x = plan.x
+                    course.y = plan.y
+                else:
+                    plan = choice([options[0], options[3]])
+                    course.x = plan.x
+                    course.y = plan.y
+            else:
+                if (point.y < pacman.y):
+                    plan = choice([options[1], options[2]])
+                    course.x = plan.x
+                    course.y = plan.y
+                else:
+                    plan = choice([options[1], options[3]])
+                    course.x = plan.x
+                    course.y = plan.y
+            '''
             plan = choice(options)
             course.x = plan.x
             course.y = plan.y
-
+            '''
         up()
         goto(point.x + 10, point.y + 10)
         dot(20, 'red')
