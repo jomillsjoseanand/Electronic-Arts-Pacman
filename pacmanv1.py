@@ -2,7 +2,7 @@
 Exercises
 1. Change the board. //complete
 2. Change the number of ghosts. //complete
-3. Change where pacman starts.
+3. Change where pacman starts. //complete
 4. Make the ghosts faster/slower.
 5. Make the ghosts smarter.
 """
@@ -16,7 +16,7 @@ state = {'score': 0}
 path = Turtle(visible=False)
 writer = Turtle(visible=False)
 aim = vector(5, 0)
-pacman = vector(-40, -80)
+pacman = vector(0, 0)
 ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
